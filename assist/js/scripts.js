@@ -20,9 +20,29 @@ jQuery(document).ready(function() {
   });
 
     // linepogressbar js end hare
+    var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
 
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+      forEach(hamburgers, function(hamburger) {
+        hamburger.addEventListener("click", function() {
+          this.classList.toggle("is-active");
+        }, false);
+      });
+    };
+    jQuery(".hamburger").click(function(){
+      jQuery(".menu-area").toggleClass("md-menu-active");
+    });
 
-
+    jQuery(window).scroll(function(){
+      var menuScroll = jQuery(window).scrollTop();
+      jQuery(".test").text(menuScroll);
+      if (menuScroll > 100) {
+        jQuery(".menu").addClass("menu-scroll");
+      } else {
+        jQuery(".menu").removeClass("menu-scroll");
+      };
+    })
 
 
 

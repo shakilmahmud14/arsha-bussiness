@@ -20,6 +20,11 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
 	font-family: "Jost", sans-serif;
 }
+.menu-area {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
 
 .header-menu ul {
 	margin: 0;
@@ -39,11 +44,27 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 16px;
 	font-weight: 400;
 	color: #FFFFFF;
+	transition: 0.3s;
 }
-
+.header-menu ul li a:hover {
+	color: #209DD8;
+}
+/* mobile manu style */
+.mobile-get-btn {
+	display: none;
+}
+.hamburger {
+	display: none;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+	width: 30px;
+	height: 3px;
+	background-color: #fff;
+}
 .hero-content-area {
-	margin-top: 100px;
+	padding-top: 100px;
 	padding-bottom: 30px;
+	background: #37517E;
 }
 
 .hero-content-text h1 {
